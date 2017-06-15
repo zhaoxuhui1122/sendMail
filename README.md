@@ -42,11 +42,11 @@ module.exports = function(req,res){
 
     }, function (err, result) {
         if (err) {
-        		console.log(err);
+            console.log(err);
             res.json("error");
         }else{
-        	  	res.json("success");
-        	  	console.log("success");
+            res.json("success");
+            console.log("success");
         }
         
     });
