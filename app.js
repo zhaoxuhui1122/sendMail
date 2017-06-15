@@ -8,7 +8,9 @@ app.set("views", "./views"); //设置根目录
 app.set("view engine", "jade"); //设置默认模板
 app.use(bodyParser.json()); //body-parser
 app.use(bodyParser.urlencoded({extended: true}));
-
+//增加了跨域请求
+const jsonp = require("./config/jsonp");
+app.all("*",jsonp);
 //service
 const sendMail = require("./service/email"); //email
 //请求接口
