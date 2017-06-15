@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="static/js/jquery.min.js"></script>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			div{
+				width: 600px;
+				margin: 30px auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			div input{
+				flex: 1;
+				padding: 3px 12px;
+				height: 30px;
+			}
+			div button{
+				padding: 6px 12px;
+				line-height: 24px;
+				margin-left: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>nodejs实现邮件发送功能</h1>
+		<hr />
+		<div>
+			<input type="email" placeholder="输入收件人邮箱地址" required="required" id="email"/>
+			<button id="btn">发送邮件</button>
+		</div>
+	</body>
+</html>
+<script>
+	$(function () {
+		var reg = /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/;
+		$("#btn").click(function () {
+			console.log(1)
+			var email = $("#email").val();
+			console.log(email)
+			if(reg.test(email)){
+				$.ajax({
+					type:"post",
+					url:"http://lcoalhost:3000/sendMail",
+					async:true,
+					data :{
+						adress :email ,//收信人地址
+						subject :"测试邮件",//邮件主题
+						html :"hello World !"//邮件内容
+					}
+				});
+			}else{
+				alert("邮件格式错误！")
+			}
+		})
+	})
+</script>

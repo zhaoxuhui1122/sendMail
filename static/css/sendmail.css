@@ -1,0 +1,23 @@
+h1 {
+	text-align: center;
+}
+
+div {
+	width: 600px;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div input {
+	flex: 1;
+	padding: 3px 12px;
+	height: 30px;
+}
+
+div button {
+	padding: 6px 12px;
+	line-height: 24px;
+	margin-left: 15px;
+}

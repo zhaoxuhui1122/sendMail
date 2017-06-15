@@ -1,0 +1,26 @@
+{
+  "name": "sendmail",
+  "version": "1.0.0",
+  "description": "nodejs实现发送邮件的功能",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoxuhui1122/sendMail.git"
+  },
+  "keywords": [
+    "sendmail"
+  ],
+  "author": "zhaoxuhui 15638862289@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaoxuhui1122/sendMail/issues"
+  },
+  "homepage": "https://github.com/zhaoxuhui1122/sendMail#readme",
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "jade": "^1.11.0"
+  }
+}
