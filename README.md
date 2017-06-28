@@ -92,7 +92,6 @@ node app.js
 		$("#btn").click(function () {
 			console.log(1)
 			var email = $("#email").val();
-			console.log(email)
 			if(reg.test(email)){
 				$.ajax({
 					type:"post",
